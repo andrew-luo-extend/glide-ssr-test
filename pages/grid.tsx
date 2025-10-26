@@ -1,8 +1,14 @@
 import dynamic from "next/dynamic";
 
 // Dynamically import the PropertyValueCard component with no SSR
-const PropertyValueCard = dynamic(() =>
-  import("../components/PropertyValueCard").then((mod) => mod.PropertyValueCard)
+const PropertyValueCard = dynamic(
+  () =>
+    import("../components/PropertyValueCard").then(
+      (mod) => mod.PropertyValueCard
+    ),
+  {
+    ssr: false,
+  }
 );
 
 // Test data with nested objects and arrays
