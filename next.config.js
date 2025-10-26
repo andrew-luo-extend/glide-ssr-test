@@ -5,6 +5,7 @@ const nextConfig = {
     outputFileTracingIgnores: ["**canvas**"],
     // instrumentationHook: true,
   },
+  output: "standalone",
 };
 
 export default nextConfig;
