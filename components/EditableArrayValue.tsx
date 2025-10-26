@@ -6,6 +6,7 @@ import DataEditor, {
   Item,
 } from "@glideapps/glide-data-grid";
 import "@glideapps/glide-data-grid/dist/index.css";
+import EditableObjectValue from "./EditableObjectValue";
 
 interface EditableArrayValueProps {
   value: unknown[];
@@ -68,6 +69,7 @@ export default function EditableArrayValue({ value }: EditableArrayValueProps) {
 
   return (
     <div style={{ height: "400px", width: "100%" }}>
+      <EditableObjectValue value={{}} />
       <DataEditor
         getCellContent={getData}
         columns={columns}
