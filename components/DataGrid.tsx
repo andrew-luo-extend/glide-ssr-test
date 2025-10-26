@@ -1,5 +1,6 @@
 import React from "react";
 import DataEditor, {
+  GridCell,
   GridCellKind,
   GridColumn,
   Item,
@@ -159,7 +160,7 @@ export default function DataGrid() {
   return (
     <div style={{ height: "100vh", width: "100%" }}>
       <DataEditor
-        getCellContent={getData}
+        getCellContent={getData as (cell: Item) => GridCell}
         columns={columns}
         rows={dummyData.length}
         width="100%"
