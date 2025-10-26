@@ -1,17 +1,7 @@
 import dynamic from "next/dynamic";
 
 // Dynamically import the PropertyValueCard component with no SSR
-const PropertyValueCard = dynamic(
-  () => import("../components/PropertyValueCard"),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="flex h-screen w-full items-center justify-center">
-        <p className="text-lg text-gray-600">Loading...</p>
-      </div>
-    ),
-  }
-);
+import { PropertyValueCard } from "@/components/PropertyValueCard";
 
 // Test data with nested objects and arrays
 const testData = {
