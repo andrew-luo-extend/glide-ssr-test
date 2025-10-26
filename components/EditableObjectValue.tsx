@@ -1,5 +1,5 @@
 import React from "react";
-import PropertyValueCard from "./PropertyValueCard";
+import { PropertyValueCard } from "./PropertyValueCard";
 
 interface EditableObjectValueProps {
   value: Record<string, unknown>;
