@@ -1,7 +1,9 @@
 import dynamic from "next/dynamic";
 
 // Dynamically import the PropertyValueCard component with no SSR
-import { PropertyValueCard } from "@/components/PropertyValueCard";
+const PropertyValueCard = dynamic(() =>
+  import("../components/PropertyValueCard").then((mod) => mod.PropertyValueCard)
+);
 
 // Test data with nested objects and arrays
 const testData = {
